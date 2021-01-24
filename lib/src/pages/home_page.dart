@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
+/* 
+ * Esta clase no se usa porque el Stateless da problemas para modificar es una clase estatica,
+ *  entonces no podiamos incremente nuestro contador
+*/ 
 class HomePage extends StatelessWidget {
 
   final TextStyle estiloTexto = new TextStyle(fontSize: 25);
-  int conteo = 10;
+  final int conteo = 10;
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text('Título'),
@@ -26,12 +29,10 @@ class HomePage extends StatelessWidget {
         child: Icon(Icons.add),
         onPressed: () {
           print(conteo);
-          conteo = conteo + 1;
+          //conteo = conteo + 1;
         },
       ),
     );
-
-    throw UnimplementedError();
   }
 
 
